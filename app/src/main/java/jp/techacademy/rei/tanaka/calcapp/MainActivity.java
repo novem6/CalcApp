@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              number1 = 0;
         } else  {
             String sNumber1 = String.valueOf(mFirstNumber);
-             number1 = Double.parseDouble(sNumber1);
+            number1 = Double.parseDouble(sNumber1);
         }
 
         EditText mSecondNumber = findViewById(R.id.secondNumber);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double result = 0;
 
         if (v.getId() == R.id.plusButton) {
-            result = number1 = number2;
+            result = number1 + number2;
         }else if (v.getId() == R.id.minusButton){
             result = number1 - number2;
         }else if (v.getId() == R.id.multipliedButton){
