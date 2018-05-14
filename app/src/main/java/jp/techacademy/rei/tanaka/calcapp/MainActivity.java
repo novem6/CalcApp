@@ -3,11 +3,9 @@ package jp.techacademy.rei.tanaka.calcapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,17 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (mFirstNumber.getText().toString().equals("")){
              number1 = 0;
         } else  {
-            String sNumber1 = String.valueOf(mFirstNumber);
-            number1 = Double.parseDouble(sNumber1);
+            number1 = Double.parseDouble(mFirstNumber.getText().toString());
         }
+
 
         EditText mSecondNumber = findViewById(R.id.secondNumber);
         double number2;
         if (mSecondNumber.getText().toString().equals("")){
             number2 = 0;
         } else {
-            String sNumber2 = String.valueOf(mSecondNumber);
-            number2 = Double.parseDouble(sNumber2);
+            number2 = Double.parseDouble(mSecondNumber.getText().toString());
         }
 
         double result = 0;
